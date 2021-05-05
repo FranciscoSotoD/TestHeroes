@@ -1,0 +1,31 @@
+<h1>Héroes</h1>
+<hr>
+
+<div class="select">
+    <select>
+      <option value="">Escoja un primer luchador:</option>
+      <option value="opcion-1" *ngFor="let select of hero"> {{ select.name }} </option>     
+    </select>
+</div>
+<div class="select">
+    <select>
+      <option value="">Escoja un segundo luchador:</option>
+      <option value="opcion-1" *ngFor="let select of hero"> {{ select.name }} </option>     
+    </select>
+</div>
+
+<button type="button" class="btn btn-danger btn-lg" onclick="pelear"> ¡¡¡PELEAR!!!</button>
+
+<div class="card-columns">
+    <div class="card" *ngFor="let h of hero">
+        <img [src]="h.images.xs" class="card-img-top" alt=" {{ h.name }}" width="30px">
+        <div class="card-body">
+            <h5 class="card-title">{{ h.name }}</h5>
+            <p class="card-text"> {{ h.appearance.gender }} </p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+</div>
+
+
+
